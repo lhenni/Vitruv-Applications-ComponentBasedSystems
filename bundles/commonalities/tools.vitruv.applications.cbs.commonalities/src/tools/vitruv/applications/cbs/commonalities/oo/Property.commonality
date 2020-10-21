@@ -15,6 +15,7 @@ referenced commonality Property {
 	with UML:Property
 	whereat {
 		// TODO We only support single-valued properties currently.
+		// TODO Should the lower bound be 0 instead?
 		-> Property.lower = 1,
 		-> Property.upper = 1
 	}

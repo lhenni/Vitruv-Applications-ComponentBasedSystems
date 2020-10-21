@@ -16,6 +16,7 @@ referenced commonality MethodParameter {
 		Parameter.direction isUmlParameterDirection "in",
 		// TODO require name !== null?
 		// TODO We only support single-valued parameters currently.
+		// TODO Use a lower bound of 0?
 		-> Parameter.lower = 1,
 		-> Parameter.upper = 1
 	}

@@ -39,6 +39,9 @@ referenced commonality InterfaceMethod {
 	// Note: No mapping for UML:Operation.isAbstract, because interface methods are expected to always be abstract
 	// (unless they are static).
 
+	// TODO Static methods in interfaces are represented by Java:ClassMethod (which can have method bodies), not Java:InterfaceMethod! (see chen2017)
+	// ClassMethod in interface is required to be static and are implicitly public.
+
 	// Note: We automatically set and unset the method's 'abstract' attribute depending on whether it is static or not.
 	has ^static {
 		= UML:Operation.isStatic

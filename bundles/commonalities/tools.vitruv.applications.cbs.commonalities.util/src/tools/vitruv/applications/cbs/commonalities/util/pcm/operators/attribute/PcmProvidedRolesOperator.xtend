@@ -57,6 +57,7 @@ class PcmProvidedRolesOperator extends AbstractAttributeMappingOperator<List<Str
 			if (pcmInterface === null) return null
 			return (RepositoryFactory.eINSTANCE.createOperationProvidedRole => [
 				providedInterface__OperationProvidedRole = pcmInterface
+				// TODO entityName
 			]) as ProvidedRole
 		].filterNull.toList
 		logger.debug('''Mapping intermediate type references «intermediateTypeReferences» to PCM provided roles «

@@ -3,7 +3,7 @@ concept ComponentBasedSystems
 // Externally contained by ComponentBasedSystems:Repository.compositeDataTypes
 referenced commonality CompositeDataType {
 
-	// Externally contained by PCM:Repository.datatypes__Repository
+	// Externally contained by PCM:Repository.dataTypes__Repository
 	with PCM:CompositeDataType
 
 	// Externally contained by ObjectOrientedDesign:DatatypesPackage.classes

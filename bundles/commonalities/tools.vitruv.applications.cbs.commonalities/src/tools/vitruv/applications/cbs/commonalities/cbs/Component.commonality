@@ -14,6 +14,7 @@ referenced commonality Component {
 	// Externally contained by PCM:Repository.components__Repository
 	with PCM:BasicComponent
 
+	// TODO Add a no-args constructor right away? Required for required roles.
 	// Contained by ObjectOrientedDesign:RepositoryPackage.subPackages
 	with ObjectOrientedDesign:(
 		Package called "ComponentPackage",
@@ -30,8 +31,9 @@ referenced commonality Component {
 	has name {
 		= PCM:BasicComponent.entityName
 
+		// TODO Possible conflict of these mappings. They need to be consistent, otherwise they cause a cycle.
 		= prefix(ObjectOrientedDesign:ComponentClass.name, "Impl")
-		-> firstUpper(ObjectOrientedDesign:ComponentPackage.name)
+		= firstUpper(ObjectOrientedDesign:ComponentPackage.name)
 	}
 
 	has providedRoles {
@@ -42,4 +44,6 @@ referenced commonality Component {
 	}
 
 	// TODO requiredRoles
+
+	// TODO SEFFs: Mapping to (empty) method with signature that matches the operation referenced by the SEFF
 }
